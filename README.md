@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About pypy3.5
 =============
 
@@ -13,55 +9,58 @@ Feedstock license: BSD 3-Clause
 
 Summary: PyPy is a Python interpreter and just-in-time compiler.
 
-How to use this package?
-========================
-
-Since PyPy is an alternative *interpreter*, using this package is different than other conda-forge packages.
-
-You want to create an **empty** Conda environment:
-
-```
-conda create -n pypyenv
-conda activate pypyenv
-```
-
-(🔴️ you might still have `python` or `pip` binaries in your $PATH, but those are the system's and you MUST NOT use them!️)
-
-Then, install this package:
-
-```
-conda install -c conda-forge pypy3.5
-```
-
-Now you can install `pip`:
-
-```
-pypy3 -m ensurepip
-```
-
-🎉 using this `pip` you can install any package you like! 
-For example, to update `pip` itself (which you should do!):
-
-```
-pypy3 -m pip install -U pip
-```
-
-or
-
-```
-pip3 install ...
-```
-
-(You can verify that it's the correct `pip3`/`pip` using `which {pip3,pip}`. It should be something like `.../miniconda3/envs/pypyenv/bin/pip` )
-
-🔴 You CANNOT use `conda install x` to install anything,
-because Conda provides pre-built package for the regular CPython interpreter, which are incompatible with PyPy.
 
 
 Current build status
 ====================
 
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+
+<table>
+    
+  <tr>
+    <td>Azure</td>
+    <td>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4125&branchName=master">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pypy3.5-feedstock?branchName=master">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4125&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pypy3.5-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4125&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pypy3.5-feedstock?branchName=master&jobName=osx&configuration=osx_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td>Windows</td>
+    <td>
+      <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
+    </td>
+  </tr>
+  <tr>
+    <td>Linux_ppc64le</td>
+    <td>
+      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
